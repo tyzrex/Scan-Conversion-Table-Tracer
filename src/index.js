@@ -1,5 +1,5 @@
-import { traceBresenham } from "./modules/bresenham.mjs";
-import {traceDDA} from "./modules/dda.mjs";
+import { traceBresenham } from "../modules/bresenham.mjs";
+import {traceDDA} from "../modules/dda.mjs";
 
 let res = document.getElementById("results");
 let tabs = document.getElementById("table");
