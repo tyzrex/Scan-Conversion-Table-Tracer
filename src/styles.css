@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+*{
+    font-family:monospace;
+}
+
+table,th,tr,td{
+    border:1px solid rgba(237, 221, 221, 0.307);
+    border-collapse: collapse;
+}
+
+td{
+    padding: 12px 20px;
+}
+
+.table-post{
+    margin-top: 20px;
+}
