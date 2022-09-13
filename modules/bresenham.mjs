@@ -1,4 +1,7 @@
+import {drawLine} from './drawline.mjs';
+
 const displayProcedure = document.getElementById("display");
+const canvas = document.getElementById("canvas")
 
 export const traceBresenham = (x0, y0, x1, y1,tab = 0) => {
     let table = {
@@ -53,6 +56,11 @@ export const traceBresenham = (x0, y0, x1, y1,tab = 0) => {
         }
     }
 
+    if(canvas.getContext){
+        const ctx = canvas.getContext('2d')
+        drawLine(ctx,[x0,y0],[x1,y1],'black',0.5);
+    }
+
     displayProcedure.innerHTML = `
     <div class="flex gap-8 justify-center items-center text-sm md:text-lg font-extralight">
     <div>
@@ -72,5 +80,3 @@ export const traceBresenham = (x0, y0, x1, y1,tab = 0) => {
     return table;
 
 }
-
-traceBresenham(20,15,30,30,1);

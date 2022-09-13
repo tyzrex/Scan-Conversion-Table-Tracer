@@ -1,5 +1,5 @@
-import { traceBresenham } from "./modules/bresenham.mjs";
-import {traceDDA} from "./modules/dda.mjs";
+import { traceBresenham } from "../modules/bresenham.mjs";
+import {traceDDA} from "../modules/dda.mjs";
 
 let res = document.getElementById("results");
 let tabs = document.getElementById("table");
@@ -8,7 +8,7 @@ const convert = document.getElementById("convert");
 const convert2 = document.getElementById("convert-2");
 const reset=document.getElementById("reset-form");
 let procedure = document.getElementById("procedure");
-
+const context = canvas.getContext('2d');
 
 const sel = (x) => {
     return document.getElementById(x);
@@ -26,6 +26,7 @@ const clearInp = () => {
     document.getElementById("init-expression-y-0").value = "";
     document.getElementById("init-expression-x-1").value = "";
     document.getElementById("init-expression-y-1").value = "";
+    context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 convert.onclick = () => {

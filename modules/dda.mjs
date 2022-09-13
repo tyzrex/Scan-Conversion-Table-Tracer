@@ -1,5 +1,7 @@
-const displayProcedure = document.getElementById("display");
+import { drawLine } from "./drawline.mjs";
 
+const displayProcedure = document.getElementById("display");
+const canvas = document.getElementById("canvas")
 
 export const traceDDA = (x0,y0,x1,y1,tab=0) => {
     console.log(x0,y0,x1,y1);
@@ -84,6 +86,14 @@ export const traceDDA = (x0,y0,x1,y1,tab=0) => {
             table.xy.push(arr[i][0]+","+arr[i][1]);
         }
     }
+
+
+    if(canvas.getContext){
+        const ctx = canvas.getContext('2d')
+        drawLine(ctx,[x0,y0],[x1,y1],'black',0.5);
+    }
+
+
     console.log(table);
     return table;
 }
