@@ -4,7 +4,7 @@ This is a simple project that i made on tracing the algorithm of DDA and bresenh
 
 ##### Screenshot
 
-![](/home/tyzrex/Documents/GitHub Projects/Scan Conversion Algorithm Tracer/docs/preview.png)
+![1671220897431](image/README/1671220897431.png)
 
 ##### Usage Guide
 
